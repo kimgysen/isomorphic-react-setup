@@ -1,0 +1,54 @@
+{
+  "name": "zwoop-website",
+  "version": "1.0.0",
+  "description": "Zwoop website with react hooks & ssr",
+  "server": "index.js",
+  "scripts": {
+    "build:server:dev": "webpack --config ./webpack.server.dev.config.js --watch",
+    "build:client:dev": "webpack --config ./webpack.client.dev.config.js --watch",
+    "build:server:prod": "webpack --config ./webpack.server.prod.config.js",
+    "build:client:prod": "webpack --config ./webpack.client.prod.config.js",
+    "start:server:prod": "export NODE_ENV=production && node ./dist/server.*.js",
+    "start:iso:dev": "export NODE_ENV=development && npm run build:client:dev & npm run build:server:dev",
+    "start:iso:prod": "npm run build:client:prod && npm run build:server:prod && npm run start:server:prod"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "kim gysen",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "config": "^3.1.0",
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "react-hot-loader": "^4.8.6",
+    "reload": "^3.0.1",
+    "sass-loader": "^7.1.0",
+    "start-server-webpack-plugin": "^2.2.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
