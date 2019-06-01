@@ -48,7 +48,9 @@ Where common contains the common components to be rendered by both server and cl
 
 For both branches simply: 
 
-Develop: npm run start:iso:dev  
-Production: npm run start:iso:prod   
+    npm install 
+
+    npm run start:iso:dev  -- hot reload 
+    npm run start:iso:prod   -- production build 
 
 And it should just work (hopefully, it works on my machine :p). 
