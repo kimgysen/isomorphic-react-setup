@@ -14,7 +14,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'server.[hash].js',
-        libraryTarget: 'commonjs2'
+        libraryTarget: 'commonjs2',
+        publicPath: '/assets/'
     },
     plugins: [
         new CleanWebpackPlugin()

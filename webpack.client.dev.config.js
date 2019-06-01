@@ -1,7 +1,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
@@ -9,6 +8,7 @@ module.exports = {
     mode: 'development',
     target: 'web',
     entry: [
+        "webpack-hot-middleware/client?path=//localhost:3000/__webpack_hmr&timeout=20000&reload=true",
         './src/client/index.js'
     ],
     output: {
@@ -17,12 +17,7 @@ module.exports = {
         publicPath: '/'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            filename: 'index-dev.html',
-            template: './src/server/html/index-dev.html'
-        })
+        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         rules: [

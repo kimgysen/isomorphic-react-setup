@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
         <div>
-            <h1>Home component</h1>
+            <h1>Home components</h1>
             <p>Navigate: </p>
             <a href="/about">About via server render</a>
             <br />

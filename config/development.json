@@ -1,6 +1,6 @@
 
 {
   "iso": {
-    "htmlRoot": "./public/build/index-dev.html"
+    "htmlRoot": "./src/server/html/index-dev.html"
   }
 }

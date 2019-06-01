@@ -4,12 +4,13 @@
   "description": "Zwoop website with react hooks & ssr",
   "server": "index.js",
   "scripts": {
-    "build:server:dev": "webpack --config ./webpack.server.dev.config.js --watch",
-    "build:client:dev": "webpack --config ./webpack.client.dev.config.js --watch",
+    "build:client:dev": "webpack --config ./webpack.client.dev.config.js",
+    "build:server:dev": "webpack --config ./webpack.server.dev.config.js",
     "build:server:prod": "webpack --config ./webpack.server.prod.config.js",
     "build:client:prod": "webpack --config ./webpack.client.prod.config.js",
+    "start:server:dev": "export NODE_ENV=development && node ./dist/server.js",
     "start:server:prod": "export NODE_ENV=production && node ./dist/server.*.js",
-    "start:iso:dev": "export NODE_ENV=development && npm run build:client:dev & npm run build:server:dev",
+    "start:iso:dev": "npm run build:client:dev & npm run build:server:dev && npm run start:server:dev",
     "start:iso:prod": "npm run build:client:prod && npm run build:server:prod && npm run start:server:prod"
   },
   "keywords": [
@@ -41,12 +42,12 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
-    "react-hot-loader": "^4.8.6",
-    "reload": "^3.0.1",
     "sass-loader": "^7.1.0",
     "start-server-webpack-plugin": "^2.2.5",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.2",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-node-externals": "^1.7.2"
   }
 }

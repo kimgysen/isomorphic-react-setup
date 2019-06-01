@@ -2,7 +2,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
-const StartServerPlugin = require('start-server-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
@@ -10,10 +9,8 @@ module.exports = {
     name: 'server',
     mode: 'development',
     target: 'node',
-    externals: nodeExternals({
-        whitelist: ['webpack/hot/poll?1000']
-    }),
-    entry: [ 'webpack/hot/poll?1000', './src/server/index' ],
+    externals: nodeExternals(),
+    entry: [ './src/server/index' ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'server.js',
@@ -21,15 +18,7 @@ module.exports = {
         libraryTarget: 'commonjs2'
     },
     plugins: [
-        new StartServerPlugin({'name': 'server.js', nodeArgs: ['--inspect']}),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new CleanWebpackPlugin(),
-        new webpack.DefinePlugin({
-            "process.env": {
-                "BUILD_TARGET": JSON.stringify('server')
-            }
-        })
+        new CleanWebpackPlugin()
     ],
     module: {
         rules: [
