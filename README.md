@@ -51,4 +51,4 @@ For both branches simply:
 Develop: npm run start:iso:dev  
 Production: npm run start:iso:prod   
 
-And it should just work. 
+And it should just work (hopefully, it works on my machine :p). 
