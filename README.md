@@ -16,7 +16,7 @@ If not, the app wouldn't be universal after all.
 Using reload.js we don't have this problem though.  
 On the downside, we need to write build files to disk.  
 On the upside: 
-- We don't have hydration exceptions (and neiher do we need to mask them) 
+- We don't have hydration exceptions (and neiher do we need to mask them)  
 - Changes to any of the server code are immediately recompiled and refreshed in the browser. 
 
 I don't know which of the two methods is more productive / error proof, it's an experiment to find out... 
@@ -25,7 +25,7 @@ Webpack
 ------- 
 Both server and client are compiled with Webpack: 
 
-server build -> dist/
+server build -> dist/  
 client build -> public/build/ 
 
 Both develop and production build configs have been added. 
@@ -36,9 +36,9 @@ Structure
 --------- 
 The structure is simply: 
 
-- client 
-- common 
-- server 
+- client  
+- common  
+- server  
 
 Where common contains the common components to be rendered by both server and client. 
 
