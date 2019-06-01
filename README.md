@@ -48,7 +48,7 @@ Where common contains the common components to be rendered by both server and cl
 
 For both branches simply: 
 
-Develop: npm run start:iso:dev 
-Production: npm run start:iso:prod 
+Develop: npm run start:iso:dev  
+Production: npm run start:iso:prod   
 
 And it should just work. 
