@@ -15,8 +15,8 @@ For both branches simply:
 
     npm install 
 
-    npm run start:iso:dev  -- hot reload 
-    npm run start:iso:prod   -- production build 
+    npm run start:iso:dev  // hot reload all changes
+    npm run start:iso:prod   // production build 
 
 And it should just work.  
 You can play around with it by just making some changes to the components in the 'common' folder and see how it refreshes in the browser. 
