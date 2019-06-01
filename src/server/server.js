@@ -11,7 +11,7 @@ const app = express();
 
 app.use(favicon('./public/favicon.ico'));
 app.use(express.static("public/build"));
-app.use(express.static(__dirname + '/public/build'));
+
 
 app.get("*", (req, res, next) => {
     if (req.originalUrl === '/reload/reload.js') return next();

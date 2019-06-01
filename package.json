@@ -41,7 +41,6 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
-    "react-hot-loader": "^4.8.6",
     "reload": "^3.0.1",
     "sass-loader": "^7.1.0",
     "start-server-webpack-plugin": "^2.2.5",
