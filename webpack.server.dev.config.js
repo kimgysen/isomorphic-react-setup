@@ -21,10 +21,13 @@ module.exports = {
         libraryTarget: 'commonjs2'
     },
     plugins: [
-        new StartServerPlugin({'name': 'server.js', nodeArgs: ['--inspect']}),
+        new StartServerPlugin({
+            'name': 'server.js', nodeArgs: ['--inspect']
+        }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new webpack.DefinePlugin({
             "process.env": {
                 "BUILD_TARGET": JSON.stringify('server')
