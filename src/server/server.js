@@ -9,7 +9,7 @@ import config from 'config';
 
 const app = express();
 
-app.use(favicon('./public/favicon.ico'));
+app.use(favicon('./favicon.ico'));
 app.use(express.static("public/build"));
 
 
