@@ -25,7 +25,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets:
-            [['@babel/preset-env', { modules: 'false' }], '@babel/preset-react'],
+            [['@babel/preset-env', { modules: false }], '@babel/preset-react'],
           plugins: [
             ['@babel/plugin-proposal-object-rest-spread', { useBuiltIns: true }],
             '@babel/plugin-proposal-class-properties'
